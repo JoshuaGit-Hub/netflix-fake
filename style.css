@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --body-backgroundColor: #383838;
+    --nav-backgroundColor: #282828;
+    --font-all: Segoe UI, sans-serif;
+}
+
+body {
+    background-color: var(--body-backgroundColor);
+    font-family: var(--font-all);
+    color: whitesmoke;
+    margin-top: 100px;
+}
+
+#navBar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 40px;
+    background-color: var(--nav-backgroundColor);
+    min-height: 50px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    gap: 10px;
+}
+
+#container-title {
+    margin-right: auto;
+}
+
+h1 {
+    font-size: 1.6em;
+}
+
+h1 span {
+    color: rgb(211, 28, 28);
+    font-size: 1.2em;
+}
+
+h1 a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+#navBar ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+#container-links li a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-weight: 500;
+}
+
+#container-buscador {
+    margin-left: auto;
+}
+
+#input-procurar-nav {
+    padding: 10px;
+    border-radius: 3px;
+    border: none;
+    opacity: 0;
+    width: 150px;
+    transition: opacity .5s ease, width .5s ease;
+}
+
+#input-procurar-nav.clicked {
+    opacity: 1;
+    width: 300px;
+}
+
+#lupa {
+    cursor: pointer;
+}
+
+#lupa.girar {
+    animation: girarLupa .5s forwards;
+}
+
+@keyframes girarLupa {
+    from {
+        transform: scale(0);
+        transform: rotate(0);
+    }
+
+    to {
+        transform: scale(1.1);
+        transform: rotate(360deg);
+    }
+}
+
+#log-out {
+    padding: 10px 30px;
+    border: none;
+    border-radius: 3px;
+    background-color: rgb(177, 23, 23);
+    transition: background .2s ease;
+    color: whitesmoke;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.507);
+}
+
+#log-out:hover {
+    background-color: rgb(133, 17, 17);
+}
+
+@media only screen and (max-width: 500px) {
+
+    #navBar {
+        justify-content: center;
+        height: 200px;
+        flex-direction: column;
+    }
+
+    body{
+        margin-top: 220px;
+    }
+
+    #navBar h1{
+        font-size: 2em;
+    }
+
+    #input-procurar-nav {
+        width: 100px;
+        align-self: self-end;
+    }
+
+    #input-procurar-nav.clicked {
+        width: 200px;
+    }
+
+    #log-out {
+        margin-left: auto;
+    }
+}
