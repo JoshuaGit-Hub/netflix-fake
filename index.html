@@ -19,8 +19,8 @@
                 </ul>
             </div>
             <div id="container-buscador">
-                <input type="text" placeholder="Título, Gênero, ano, favoritos" id="input-procurar-nav">
-                <i class="fa-solid fa-magnifying-glass fa-xl" style="color: #ffffff;" id="lupa"></i>
+                <input type="text" placeholder="Título, Gênero, ano, favoritos" class="inputs-busca">
+                <i class="fa-solid fa-magnifying-glass fa-xl lupa" style="color: #ffffff;"></i>
             </div>
 
             <button id="log-out">Logout</button>
@@ -43,13 +43,12 @@
 
         <section id="busca-section">
             <div id="filters-btns">
-                <button id="btn-todos" data-genero="todos">Todos</button>
-                <button id="btn-acao" data-genero="acao">Ação</button>
-                <button id="btn-terror" data-genero="terror">Terror</button>
-                <button id="btn-romance" data-genero="romance">Romance</button>
-                <button id="btn-favorite" data-genero="favoritos">Favoritos</button>
+                <button id="btn-todos" class="btns-filter" data-genero="todos">Todos</button>
+                <button id="btn-acao" class="btns-filter" data-genero="acao">Ação</button>
+                <button id="btn-terror" class="btns-filter" data-genero="terror">Terror</button>
+                <button id="btn-romance" class="btns-filter" data-genero="romance">Romance</button>
+                <button id="btn-favorite" class="btns-filter" data-genero="favoritos">Favoritos</button>
             </div>
-            <input type="text" placeholder="Buscar título, favorito" id="input-busca-principal">
         </section>
 
         <section id="movies-section">
